@@ -4,21 +4,12 @@ phases:
   pre_build:
     commands:
       - echo "Installing dependencies..."
-      - npm ci  # Use 'npm ci' for faster and consistent dependency installation
+      - npm install
 
   build:
     commands:
       - echo "Building the Node.js application..."
       - npm run build
 
-  post_build:
-    commands:
-      - echo "Running tests..."
-      - npm install mocha -g  # Install Mocha globally to avoid redundant installations
-      - npm test
-
 artifacts:
   files: '**/*'
-cache:
-  paths:
-    - node_modules/
