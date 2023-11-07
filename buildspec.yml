@@ -14,7 +14,11 @@ phases:
   post_build:
     commands:
       - echo "Running tests..."
+      - npm install mocha 
       - npm test
 
 artifacts:
   files: '**/*'
+cache:
+  paths:
+    - node_modules/
