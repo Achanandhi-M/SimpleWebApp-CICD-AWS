@@ -15,8 +15,7 @@ phases:
     commands:
       - echo "Running tests in parallel..."
       - npm install mocha -g
-      - npm install mocha-parallel-tests
-      - mocha-parallel-tests --reporter spec 'test/**/*.test.js'
+      - npm test
 
 artifacts:
   files: '**/*'
