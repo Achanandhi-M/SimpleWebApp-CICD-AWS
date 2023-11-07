@@ -12,12 +12,10 @@ phases:
       - npm run build
 
   post_build:
-  commands:
-    - echo "Running tests in parallel..."
-    - npm install mocha -g
-    - npm install mocha-parallel-tests
-    - mocha-parallel-tests --reporter spec 'test/**/*.test.js'
-
+    commands:
+      - echo "Running tests..."
+      - npm install mocha -g  # Install Mocha globally to avoid redundant installations
+      - npm test
 
 artifacts:
   files: '**/*'
