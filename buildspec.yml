@@ -13,7 +13,7 @@ phases:
 
   post_build:
     commands:
-      - echo "Running tests in parallel..."
+      - echo "Running tests ..."
       - npm install mocha -g
       - npm test
 
