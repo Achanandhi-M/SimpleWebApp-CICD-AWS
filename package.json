@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "test": "mocha test/*.test.js",
-    "build": "npx babel src -d dist"
+    "prebuild": "mkdir -p dist",
+    "build": "cp app.js dist/app.js"
   },
   "keywords": [],
   "author": "",
@@ -17,9 +18,9 @@
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
+    "babel-cli": "^6.26.0",
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
     "mocha": "^9.1.3"
   }
 }
-
